@@ -7,7 +7,7 @@ export const addAsyncNumber: any = createAsyncThunk(
     return new Promise((resolve: any) => {
       setTimeout(() => {
         resolve(num);
-      }, 1000);
+      }, 5000);
     });
   }
 );

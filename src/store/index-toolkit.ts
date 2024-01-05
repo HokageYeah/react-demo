@@ -1,8 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import countReducer from "./home-toolkit/reducer";
+import homeCountTookitReducer from "./home-toolkit/reducer";
+import homeCountReducer from "./home/reducer";
 
 export default configureStore({
   reducer: {
-    tookitCounter: countReducer,
+    tookitCounter: homeCountTookitReducer,
+    home: homeCountReducer,
   },
 });
