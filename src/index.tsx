@@ -7,11 +7,13 @@ import store from "./store";
 import storeToolkit from "./store/index-toolkit";
 import { Provider } from "react-redux";
 import { HashRouter } from "react-router-dom";
+import '@/assets/css/index.less';
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
+  // 严格模式会让代码打印执行两次
   <React.StrictMode>
     <Provider store={storeToolkit}>
       <HashRouter>
