@@ -4,7 +4,6 @@ import { UseStatesStyle } from "./style";
 
 interface Iprops {
   children?: ReactNode;
-  className: string;
 }
 
 const ReactUseEffect: FC<Iprops> = memo((props) => {
@@ -35,7 +34,7 @@ const ReactUseEffect: FC<Iprops> = memo((props) => {
   return (
     <div className="modelCell">
       <UseStatesStyle>
-        <p>点击了 {count} 次</p>
+        <p>useEffect点击了 {count} 次</p>
         <button onClick={() => setCount(count + 1)}>点击</button>
       </UseStatesStyle>
     </div>

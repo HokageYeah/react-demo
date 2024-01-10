@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
 export const UseStatesStyle = styled.div`
+  .useHooks {
+    background-color: darkblue;
+  }
   p {
     font-size: 20px;
   }

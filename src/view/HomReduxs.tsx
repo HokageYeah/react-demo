@@ -1,5 +1,4 @@
-import PropTypes from "prop-types";
-import React, { memo } from "react";
+import { memo } from "react";
 import type { ReactNode, FC } from "react";
 import {
   addNumberAction,
@@ -7,6 +6,7 @@ import {
   addNumberActionAsync,
 } from "../store/home/actionCreators";
 import { connect } from "react-redux";
+import { UseStatesStyle } from "./react-hooks-demo/hooks-demo/style";
 interface IProps {
   children?: ReactNode;
   counter: number;
@@ -17,31 +17,33 @@ interface IProps {
 
 const about: FC<IProps> = memo((props) => {
   return (
-    <div>
-      <p>传统的redux-Counter: {props.counter}</p>
-      <button
-        onClick={() => {
-          props.increment(1);
-        }}
-      >
-        添加+
-      </button>
-      <button
-        style={{ marginLeft: "20px", marginRight: "20px" }}
-        onClick={() => {
-          props.decrement(2);
-        }}
-      >
-        减少-
-      </button>
-      <button
-        onClick={() => {
-          props.asyncAdd(2);
-        }}
-      >
-        异步调用+
-      </button>
-    </div>
+    <UseStatesStyle>
+      <div className="useHooks">
+        <p>传统的redux-Counter: {props.counter}</p>
+        <button
+          onClick={() => {
+            props.increment(1);
+          }}
+        >
+          添加+
+        </button>
+        <button
+          style={{ marginLeft: "20px", marginRight: "20px" }}
+          onClick={() => {
+            props.decrement(2);
+          }}
+        >
+          减少-
+        </button>
+        <button
+          onClick={() => {
+            props.asyncAdd(2);
+          }}
+        >
+          异步调用+
+        </button>
+      </div>
+    </UseStatesStyle>
   );
 });
 

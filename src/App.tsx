@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
 import { Route, Routes, Navigate, Link, NavLink } from "react-router-dom";
 import HomeToolkitRedux from "./view/HomeToolkitRedux";
@@ -8,7 +8,7 @@ import NotFount from "./view/NotFounds";
 import ReactHooksDemo from "./view/react-hooks-demo/ReactHooksDemo";
 
 function App(props: any) {
-  const [classState, setClassState] = React.useState(false);
+  // const [classState, setClassState] = React.useState(false);
   return (
     <div className="App">
       <div className="header">

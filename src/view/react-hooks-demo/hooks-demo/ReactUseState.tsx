@@ -4,7 +4,6 @@ import { UseStatesStyle } from "./style";
 
 interface Iprops {
   children?: ReactNode;
-  className: string;
 }
 
 const ReactUseState: FC<Iprops> = memo((props) => {
