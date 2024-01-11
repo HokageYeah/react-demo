@@ -9,6 +9,7 @@ import ReactUseCallBack from "./hooks-demo/ReactUseCallBack";
 import ReactUseMemo from "./hooks-demo/ReactUseMemo";
 import ReactUseRef from "./hooks-demo/ReactUseRef";
 import ReactUseImperativeHandle from "./hooks-demo/ReactUseImperativeHandle";
+import ReactUseLayoutEffect from "./hooks-demo/ReactUseLayoutEffect";
 
 interface Iprops {
   children?: ReactNode;
@@ -26,8 +27,9 @@ const ReactHooksDemo: FC<Iprops> = memo((props) => {
       </ThemeProvider>
       <ReactUseCallBack />
       <ReactUseMemo />
-      <ReactUseRef />
+      {/* <ReactUseRef /> */}
       <ReactUseImperativeHandle />
+      <ReactUseLayoutEffect />
     </ReactHooksStyle>
   );
 });
