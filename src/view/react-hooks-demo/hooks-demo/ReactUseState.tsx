@@ -15,13 +15,22 @@ const ReactUseState: FC<Iprops> = memo((props) => {
   const [funCount, setFunCount] = useState(() => {
     return 2;
   });
+  const IncrementSetFun = () => {
+    setCount((state) => state + 1);
+    console.log("count", count);
+    setCount((state) => state + 1);
+    setCount((state) => state + 1);
+  };
   return (
     <div className="modelCell">
       <UseStatesStyle>
         <p>useState:{count}</p>
         <button onClick={() => setCount(count + 1)}>Increment++</button>
+        <button onClick={() => IncrementSetFun()}>IncrementSetFun++</button>
         <p>useStateFun:{funCount}</p>
-        <button onClick={() => setFunCount(funCount + 1)}>IncrementFun++</button>
+        <button onClick={() => setFunCount(funCount + 1)}>
+          IncrementFun++
+        </button>
       </UseStatesStyle>
     </div>
   );

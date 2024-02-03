@@ -24,6 +24,7 @@ const ReactUseLayoutEffect: FC<Iprops> = memo((props) => {
   useEffect(() => {
     // 当 count 变化时，修改 div 元素的背景色
     divRef2.current.style.backgroundColor = count2 % 2 === 0 ? "gray" : "blue";
+    // setCount2(1)
     // 在控制台输出调试信息
     console.log("useEffect executed");
   }, [count2]);
