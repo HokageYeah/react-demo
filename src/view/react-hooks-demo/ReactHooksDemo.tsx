@@ -10,6 +10,9 @@ import ReactUseMemo from "./hooks-demo/ReactUseMemo";
 import ReactUseRef from "./hooks-demo/ReactUseRef";
 import ReactUseImperativeHandle from "./hooks-demo/ReactUseImperativeHandle";
 import ReactUseLayoutEffect from "./hooks-demo/ReactUseLayoutEffect";
+import ReactSetState from "./hooks-demo/ReactSetState";
+import ReactUseTransition from "./hooks-demo/ReactUseTransition";
+import ReactUseDeferredValue from "./hooks-demo/ReactUseDeferredValue";
 
 interface Iprops {
   children?: ReactNode;
@@ -20,6 +23,7 @@ const ReactHooksDemo: FC<Iprops> = memo((props) => {
   console.log("ReactHooksDemo:children----", children);
   return (
     <ReactHooksStyle>
+      <ReactSetState />
       <ReactUseState />
       <ReactUseEffect />
       <ThemeProvider>
@@ -29,6 +33,8 @@ const ReactHooksDemo: FC<Iprops> = memo((props) => {
       <ReactUseMemo />
       {/* <ReactUseRef /> */}
       <ReactUseImperativeHandle />
+      <ReactUseTransition />
+      <ReactUseDeferredValue />
       <ReactUseLayoutEffect />
     </ReactHooksStyle>
   );
