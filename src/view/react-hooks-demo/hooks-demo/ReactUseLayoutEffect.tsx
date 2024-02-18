@@ -14,6 +14,10 @@ const ReactUseLayoutEffect: FC<Iprops> = memo((props) => {
   useLayoutEffect(() => {
     // 当 count 变化时，修改 div 元素的背景色
     divRef.current.style.backgroundColor = count % 2 === 0 ? "gray" : "blue";
+    // 下面这个判断加上了也没有闪烁现象
+    if(count % 2 === 0) {
+      setCount(count + 1)
+    }
     // 在控制台输出调试信息
     console.log("useLayoutEffect executed");
   }, [count]);
@@ -24,6 +28,10 @@ const ReactUseLayoutEffect: FC<Iprops> = memo((props) => {
   useEffect(() => {
     // 当 count 变化时，修改 div 元素的背景色
     divRef2.current.style.backgroundColor = count2 % 2 === 0 ? "gray" : "blue";
+    // 下面这个判断加上了有闪烁现象
+    if(count2 % 2 === 0) {
+      setCount2(count2 + 1)
+    }
     // setCount2(1)
     // 在控制台输出调试信息
     console.log("useEffect executed");

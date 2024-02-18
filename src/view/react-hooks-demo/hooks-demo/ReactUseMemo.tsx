@@ -1,6 +1,7 @@
 import { memo, useState, useMemo } from "react";
 import type { ReactNode, FC } from "react";
 import { UseStatesStyle } from "./style";
+import { shallowEqual } from "react-redux";
 
 interface Iprops {
   children?: ReactNode;
@@ -38,5 +39,5 @@ const ReactUseMemo: FC<Iprops> = memo((props) => {
       </UseStatesStyle>
     </div>
   );
-});
+},shallowEqual);
 export default ReactUseMemo;

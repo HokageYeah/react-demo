@@ -16,13 +16,17 @@ function Timer() {
   useEffect(() => {
     console.log("countRef.current---", countRef.current);
     console.log("countDefault---", countDefault);
+    console.log("useEffect-timer---", timer);
     countRef.current = timer;
     countDefault = timer;
   }, [timer]);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setTimer((timer) => timer + 1);
+      setTimer((timer) => {
+        console.log('setTimer-timer---', timer);
+        return timer + 1
+      });
       console.log("timer---", timer);
       // setTimer(timer + 1);
     }, 1000);

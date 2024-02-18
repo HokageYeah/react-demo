@@ -2,6 +2,10 @@ import React, { memo, useState, useEffect } from "react";
 import type { ReactNode, FC } from "react";
 import { UseStatesStyle } from "./style";
 
+// useEffect的解析：
+// 通过useEffect的Hook，可以告诉React需要在渲染后执行某些操作
+// useEffect要求我们传入一个回调函数，在React执行完更新DOM操作之后，就会回调这个函数
+// 默认情况下**，无论是第一次渲染之后**，还是每次更新之后，都会执行这个 回调函数
 interface Iprops {
   children?: ReactNode;
 }
