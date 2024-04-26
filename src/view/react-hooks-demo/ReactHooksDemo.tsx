@@ -14,6 +14,7 @@ import ReactSetState from "./hooks-demo/ReactSetState";
 import ReactUseTransition from "./hooks-demo/ReactUseTransition";
 import ReactUseDeferredValue from "./hooks-demo/ReactUseDeferredValue";
 import ReactClosureTrap from "./hooks-demo/ReactClosureTrap";
+import ReactUseReducer from "./hooks-demo/ReactUseReducer";
 
 interface Iprops {
   children?: ReactNode;
@@ -38,6 +39,7 @@ const ReactHooksDemo: FC<Iprops> = memo((props) => {
       <ReactUseDeferredValue />
       <ReactUseLayoutEffect />
       <ReactClosureTrap />
+      <ReactUseReducer />
     </ReactHooksStyle>
   );
 });
